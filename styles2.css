@@ -1,0 +1,236 @@
+/* Beautiful, clean, and basic styles.css with short, easy-to-understand comments */
+
+body {
+  margin: 0; /* No browser's default margins (like removing page borders). */
+  font-family: 'Segoe UI', sans-serif; /* Smooth, modern font for all text. */
+  background: #fff; /* White background gives clean look. */
+  color: #333; /* Dark grey text = easy to read. */
+}
+
+nav {
+  display: flex; /* give Items side by side (horizontally) like logo and menus instead of vertically. */
+  justify-content: space-between; 
+  /* Above pushes the first item (logo) to the left and the last item (menu) to the right, with space in between.*/
+  align-items: center; /* Vertically center the items */
+  padding: 1rem 2rem; 
+  /* padding Adds space inside the nav bar:
+  1rem top/bottom,
+  2rem left/right.*/
+  background: linear-gradient(to right, #ffecd2, #fcb69f); 
+  /* background Adds a smooth gradient background from left to right (light cream to peach color). */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow under nav. */
+  /*0 → Horizontal offset (X-axis) how far the shadow moves left or right.
+    2px → Vertical offset (Y-axis) how far the shadow moves up or down.
+    5px → Blur radius (to make shadow blurry ,blurr increse with increasing value)
+    rgba(0, 0, 0, 0.1) → Shadow color r=red,g=green,b=blue,a=alpha(transparency)*/
+}
+
+.n-logo a {
+  font-size: 2.5rem; /* Big logo text. */
+  font-weight: bold; /* Bold = stands out. */
+  text-decoration: none; /*  No underline. */
+  color: #222; /* Dark grey color. */
+}
+
+.n-logo a span {
+  color: #ff5722; /* Orange for styled part like “Ice” in IceWorld. */
+}
+
+.n-menu {
+  display: flex; /* Menu items side by side horizontally. */
+  list-style: none; /* No bullet points. */
+  gap: 1.5rem; /* Space between menu items. */
+}
+
+.n-menu a {
+  font-size: 1.2rem;
+  text-decoration: none; /* No underline on links. */
+  color: #333; /* Dark grey text. */
+  font-weight: 500; /* Medium-bold text. 
+  normal or 400 – regular
+  bold or 700 – bold
+  100 to 900 – from thin to very bold*/
+  transition: color 0.3s; /* Makes the link color change smoothly (over 0.3 seconds) when you hover.
+  (Hover means when your mouse pointer moves over an element (like a button, link, image, etc.), without clicking it.). */
+}
+
+.n-menu a:hover {
+  color: #ff5722; /* change menu color to orange on hover , a:hover is psuedo class. */
+}
+
+a {
+  text-decoration: none;  /* removes underline */
+  color: white;           /* sets font color to white */
+}
+
+.btn{
+  background: #ff5722; /* Bright orange background. */
+  color: #fff; /* White text. */
+  padding: 0.5rem 1rem; /* Padding inside the button space of 0.5rem from top/bottom & space of 1rem from left/right. */
+  border: none; /* No border. */
+  border-radius: 25px; /* Rounded pill shape. */
+  cursor: pointer; /* Shows hand on hover. */
+  font-weight: 500; /* Medium-bold font. */
+  transition: background 0.3s; /* Smooth background change on hover. */
+  
+}
+
+.btn:hover {
+  background: #e64a19; /* Darker orange when hovered. */
+}
+
+header {
+  display: flex; /* Content side by side horizontally (text and image). */
+  align-items: center; /* Vertically center items. */
+  justify-content: space-between; /* Push content apart. Space */
+  padding: 45px 100px; /* from top/bottom 40px space and from left/right 100px space */
+  flex-wrap: wrap; /* display: flex; must be set).
+  It allows flex items (like boxes, buttons, cards, etc.) to move to the next line if there's not enough space. */
+  height: 515px;
+  box-shadow: rgba(0, 0, 0, 0.2);
+}
+
+.header-img img {
+  width: 620px; /* Fixed width. */
+  height: auto; /* Adjusts automatically. */
+  border-color: #f76c6c;
+  border-radius: 8px;
+  
+}
+
+.header-cont {
+  flex: 1; /* Tells the element to take up all available space in a flex container. */
+  text-align: center; /* Text starts from left. */
+  max-width: 500px; /* Limits the element’s maximum width to 500 pixels — even if there’s more space available. */
+  margin-left: 20px; /* Adds 20px space on the left side of the element 
+  — usually used to separate it from another element (like an image or icon). */
+}
+
+.header-cont h1 {
+  font-size: 2rem; /*font size of <h1> tag ( Discover...) is set to 2rem */
+  margin-bottom: 10px; /* set Space under heading ( Discover...) to 10px. it is space betweens Discover... and Delicious ...*/
+}
+
+.header-cont h1 span {
+  color: #f76c6c; /* Highlighted text color. */
+}
+
+.header-cont p {
+  font-size: 1rem; /* Medium text set <p> text font size to 1rem. */
+  margin-bottom: 25px; /* Space below paragraph text (set 25px space between "Delicious ... & Explore Flavors btn"). */
+  color: #555; /*paragraph text ""Delicious ..." fontcolour set to Lighter grey. */
+  line-height: 1.6; /* More readable spacing between lines. */
+}
+
+.popular-sec, .category-sec, .subs-sec {
+  padding: 2rem; /* Padding around(set 2rem space from top,nottom,left,right to) these sections. */
+}
+
+.section-head /*Popular Picks ,Browse Categories,Place Your Order*/ {
+  text-align: center; /* Heading in center. */
+  font-size: 1.8rem; /* Large heading. */
+  margin-bottom: 1rem; /* 1rem Space below heading . */
+  color: #222; /* Dark for good contrast. */
+}
+
+
+.popular-grid {
+  display: flex; /* Flex layout instead of grid. */
+  justify-content: center; /* Centered cards. */
+  gap: 2rem; /* Bigger gap between cards. */
+  /*flex-wrap: wrap;  Wraps on small screens. */
+}
+
+.category-grid {
+  margin-left : 8rem;
+  display: flex; /* Flex layout instead of grid. */
+  justify-content: left; /* Centered cards. */
+  gap: 2rem; /* Bigger gap between cards. */
+  /*flex-wrap: wrap;  Wraps on small screens. */
+}
+
+.popular-card, .category-card {
+  background: #ffffff; /* White background. */
+  padding: 1rem; /* Inner spacing of img,texts from top,bottom,left,right of 1rem */
+  border-radius: 15px; /* Rounded corners. */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Soft shadow. */
+  transition: transform 0.3s; /* Smooth hover zoom. */
+}
+
+.popular-card:hover, .category-card:hover {
+  transform: scale(1.03); /* Zoom in effect on hover.
+  transform → The CSS property being animated (like scale, rotate, translate, etc.)
+  0.3s → Duration of the animation (0.3 seconds)*/
+}
+
+.popular-card img {
+  width: 100%; /* Full width. */
+  height: 300px; /* set the height of image. */
+  object-fit: cover; /* Makes the image crop itself to fill the box without stretching. */
+  border-radius: 0.5rem; /* ice cream image rounded by 0.5rem. */
+  margin-bottom: 1rem; /* Space below popular card (ice cream) image. */
+}
+
+.category-card img {
+  width: 100%; /* Full width. */
+  height: 300px; /* set the height of image. */
+  object-fit: cover; /* Makes the image crop itself to fill the box without stretching. */
+  border-radius: 0.5rem; /* ice cream image rounded by 0.5rem. */
+  margin-bottom: 1rem; /* Space below popular card (ice cream) image. */
+}
+
+.banner {
+  text-align: center; /* Center content. */
+  padding: 1rem; /* Inner space. */
+  background: linear-gradient(to right, #ff9a9e, #fad0c4); /* Soft pink gradient. */
+  color: #222; /* Dark text. */
+}
+
+.banner__flex {
+  display: flex; /* Side by side items. */
+  gap: 5rem; /* Big space between them. */
+  justify-content: center; /* Center everything. */
+  flex-wrap: wrap; /* Wrap on small screens. */
+  margin-top: 2rem; /* Space above banner images. */
+}
+
+.banner__image {
+  width: 40px; /* Fixed small icons. */
+}
+
+.subs-box input {
+  padding: 0.5rem; /* Space inside input. */
+  border: 1px solid #ccc; /* Light grey border. */
+  border-radius: 25px; /* Rounded input. */
+  width: 250px; /* Fixed width. */
+  margin-right: 0.5rem; /* Space from button. */
+}
+
+footer {
+  background: #1f1f1f; /* Dark footer. */
+  color: #fff; /* White text. */
+  text-align: center; /* Centered footer. */
+  padding: 2rem 1rem; /* Inside padding. */
+}
+
+.footer-links, .footer-icons {
+  display: flex; /* Side by side links/icons. */
+  justify-content: center; /* Centered. */
+  gap: 1.5rem; /* Space between them. */
+  flex-wrap: wrap; /* Wrap on small screens. */
+  margin-top: 1rem; /* Top space. */
+}
+
+.footer-links a, .footer-icons a {
+  color: #fff; /* White links/icons. */
+  text-decoration: none; /* No underline. */
+  font-size: 1.2rem; /* Bigger icons/links. */
+}
+
+.footer-bar {
+  font-size: 0.9rem; /* Small text. */
+  color: #bbb; /* Light grey color. */
+  margin-top: 2rem; /* Space on top. */
+}
+
+

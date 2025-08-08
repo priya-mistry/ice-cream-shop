@@ -1,0 +1,71 @@
+<!-- Order Form (Integrated) -->
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles2.css">
+	<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 20px;
+}
+div {
+  width:400;
+  height:auto;
+  background-color: #f0f8ff;
+  border-color:black;
+  border-radius:0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+input[type="text"],
+input[type="submit"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+ }
+</style>
+</head>
+<body>
+<section class="popular-sec" id="popular">
+   
+  <form action="save_order.php" method="POST" name="form1" onsubmit="return validate(this);">
+
+
+    <center>
+    <div class="order-form">
+ 	<h2 class="section-head">Place Your Order</h2>
+	<table>
+        	<tr>
+			<td>Email:</td>
+        		<td><input type="text" name="email" id="email" required></td>
+		</tr>
+		<tr>
+      <td>  <label for="ice_cream">Choose your Ice Cream:</label></td>
+        			
+                <td><select name="ice_cream" id="ice_cream" required>
+                  <option value="">choose ice-cream</option>
+                  <option value="Vanilla Icecream" name="Vanilla Icecream">Vanilla</option>
+                  <option value="chocolate Icecream" name="chocolate Icecream">Chocolate</option>
+                  <option value="strawberry Icecream" name="strawberry Icecream">Strawberry</option>
+                </select></td>
+		</tr>
+		<tr>
+        		<td><label for="quantity">Quantity:</label></td>
+        		<td><input type="number" name="quantity" value="1" min="1" required></td>
+		</tr>
+        </table><br><br>
+        <input type="submit" value="Place Order">
+
+      </div>
+      </center>
+    </form>
+ </section>
+	 <script src="main.js"></script>
+</body>
+</html>
